@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-card">
+        <h1 class="main-title">Product Manager</h1>
+        <p class="subtitle">Manage your products using JavaScript and Local Storage</p>
+
+        <div class="form-container">
+            <div class="input-group">
+                <input type="text" id="productName" placeholder="Product name" autocomplete="off">
+            </div>
+            <div class="input-group">
+                <input type="number" id="productPrice" placeholder="Product price" min="0.01" step="any" autocomplete="off">
+            </div>
+            <div class="input-group">
+                <input type="number" id="productQuantity" placeholder="Product quantity" min="1" step="1" autocomplete="off">
+            </div>
+
+            <p id="message"></p>
+
+            <div class="form-actions">
+                <button type="button" id="saveBtn">Save Product</button>
+                <button type="button" id="cancelEditBtn" class="cancel-btn hidden">Cancel</button>
+            </div>
+        </div>
+
+        <div class="products-section">
+            <h2>Products</h2>
+
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search products by name..." autocomplete="off">
+            </div>
+
+            <div class="summary-bar">
+                <p>Total products: <span id="productsCount">0</span></p>
+                <p>Total value: <span id="totalValue">$0.00</span></p>
+            </div>
+
+            <div id="productsDisplayContainer"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
